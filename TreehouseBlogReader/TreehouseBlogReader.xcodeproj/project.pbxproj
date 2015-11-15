@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5755EAAD1BF7F7A00061C7FB /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 5755EAAC1BF7F7A00061C7FB /* BlogPost.m */; settings = {ASSET_TAGS = (); }; };
+		5755EAAF1BF825010061C7FB /* treehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 5755EAAE1BF825010061C7FB /* treehouse.png */; settings = {ASSET_TAGS = (); }; };
 		57AC95191BF7120A00650B8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AC95181BF7120A00650B8A /* main.m */; };
 		57AC951C1BF7120A00650B8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AC951B1BF7120A00650B8A /* AppDelegate.m */; };
 		57AC951F1BF7120A00650B8A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AC951E1BF7120A00650B8A /* TableViewController.m */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5755EAAB1BF7F7A00061C7FB /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
+		5755EAAC1BF7F7A00061C7FB /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
+		5755EAAE1BF825010061C7FB /* treehouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = treehouse.png; path = ../../../../../Downloads/BlogReader/BlogReader/treehouse.png; sourceTree = "<group>"; };
 		57AC95141BF7120A00650B8A /* TreehouseBlogReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreehouseBlogReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AC95181BF7120A00650B8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		57AC951A1BF7120A00650B8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +68,8 @@
 				57AC951D1BF7120A00650B8A /* TableViewController.h */,
 				57AC951E1BF7120A00650B8A /* TableViewController.m */,
 				57AC95201BF7120A00650B8A /* Main.storyboard */,
+				5755EAAB1BF7F7A00061C7FB /* BlogPost.h */,
+				5755EAAC1BF7F7A00061C7FB /* BlogPost.m */,
 				57AC95231BF7120A00650B8A /* Assets.xcassets */,
 				57AC95251BF7120A00650B8A /* LaunchScreen.storyboard */,
 				57AC95281BF7120A00650B8A /* Info.plist */,
@@ -74,6 +81,7 @@
 		57AC95171BF7120A00650B8A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5755EAAE1BF825010061C7FB /* treehouse.png */,
 				57AC95181BF7120A00650B8A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -137,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5755EAAF1BF825010061C7FB /* treehouse.png in Resources */,
 				57AC95271BF7120A00650B8A /* LaunchScreen.storyboard in Resources */,
 				57AC95241BF7120A00650B8A /* Assets.xcassets in Resources */,
 				57AC95221BF7120A00650B8A /* Main.storyboard in Resources */,
@@ -153,6 +162,7 @@
 				57AC951F1BF7120A00650B8A /* TableViewController.m in Sources */,
 				57AC951C1BF7120A00650B8A /* AppDelegate.m in Sources */,
 				57AC95191BF7120A00650B8A /* main.m in Sources */,
+				5755EAAD1BF7F7A00061C7FB /* BlogPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +313,7 @@
 				57AC952D1BF7120A00650B8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
