@@ -24,9 +24,18 @@
     return [[self alloc] initWithTitle:title];
 }
 
--(NSURL*)getImagePathURL {
+-(NSURL *)getImagePathURL {
 //    NSLog(@"%@", [self.imagePath class]);
     return [NSURL URLWithString:self.imagePath];
+}
+
+-(NSString *)formatteredDate {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *tempDate = [dateFormatter dateFromString:self.date];
+
+    [dateFormatter setDateFormat:@"EE MMM,dd"];
+    return [dateFormatter stringFromDate:tempDate];
 }
 
 @end

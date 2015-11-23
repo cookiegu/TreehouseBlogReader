@@ -14,9 +14,11 @@
 @property (nonatomic, strong)NSString* author;;
 @property (nonatomic, strong)NSString* imagePath;
 @property (nonatomic, strong)NSString* date;
+@property (nonatomic, strong)NSURL* url;
 
 +(id)blogPostWithTitle:(NSString*)title;
 
 -(NSURL*)getImagePathURL;
+-(NSString *)formatteredDate;
 
 @end

@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     // uRL
     NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary/"];
     // download NSData
@@ -36,7 +35,8 @@
         blogPost.author = post[@"author"];
         blogPost.imagePath = post[@"thumbnail"];
         blogPost.date = post[@"date"];
-        
+        blogPost.url = [NSURL URLWithString:post[@"url"]];
+
         [self.blogPosts addObject:blogPost];
     }
 }
@@ -51,16 +51,15 @@
     return [self.blogPosts count];
 }
 
-
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier =@"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+
     BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
 
     NSLog(@"%@",blogPost.imagePath);
     cell.textLabel.text = blogPost.title;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", blogPost.author, blogPost.date];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", blogPost.author, [blogPost formatteredDate]];
 
     if ([blogPost.imagePath isKindOfClass:[NSString class]]) {
         NSData *imageData = [NSData dataWithContentsOfURL:[blogPost getImagePathURL]];
@@ -71,6 +70,13 @@
     }
 
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+
+    UIApplication *application = [UIApplication sharedApplication];
+    [application openURL:blogPost.url];
 }
 
 - (void)didReceiveMemoryWarning {
